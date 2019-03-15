@@ -5,6 +5,12 @@ body{
     font-size:small;
 }
 
+
+h3{
+    margin:0;
+    padding:0;
+}
+
 ul{
     margin:0;
     padding:0;
@@ -28,7 +34,6 @@ header{
 nav{
     float:right;
     padding:15px 30px 15px 15px;
-    clear:none;
 }
 
 nav li{
@@ -42,7 +47,8 @@ nav img{
     vertical-align: middle;
 }
 
-nav a:hover{
+nav a:hover,
+footer li:hover{
      text-decoration: underline;
      color: rgba(0,0,0,0.60);
 }
@@ -50,14 +56,14 @@ nav a:hover{
 .main{
     text-align:center;
     margin-top:8%;
-  
+    height:62vh;
+    clear:none;
 }
 
 .main a{
     background:#f2f2f2;
     padding:10px 15px;
     margin:0px 5px;
-    
 }
 
 .main a:hover{
@@ -72,4 +78,72 @@ nav a:hover{
     padding:0px 25px;
     border:1px solid rgba(0,0,0,0.10);
     margin:35px 0 35px 0;
+}
+
+#searchbar:hover{
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+footer{
+    width:100%;
+    background:#f5f5f7;
+    color:#56565a;
+}
+
+footer a{
+    color:#56565a;
+}
+
+footer h3{
+    border-top:1px solid #e8e8eb;
+    border-bottom:1px solid #e8e8eb;
+    padding:10px 0 10px 35px;
+}
+
+footer li{
+    display:inline;
+    padding:0 10px;
+}
+
+.leftside{
+    float:left;
+    padding:20px 0 25px 25px;
+}
+
+.rightside{
+    float:right;
+    padding:20px 25px 25px 0;
+}
+
+@media(max-height:320px){
+    footer{
+        display:none;
+    }
+}
+
+@media(max-width:678px){
+    .leftside,.rightside{
+        padding:0;
+        text-align:center;
+        float:none;
+        padding:5px 0;
+
+    }
+
+    .main{
+        height:75vh;
+    }
+    
+    footer h3{
+        padding:10px 0 10px 10px;
+    }
+
+
+    .main a{
+        display:none;
+    }
+
+    #searchbar{
+        width:90%;
+    }
 }
